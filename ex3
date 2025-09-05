@@ -1,0 +1,26 @@
+import re 
+
+def extrair_tags(html):
+    return re.findall(pattern r' </?[^>]+>',html)
+
+def verificar_tags_html(html):
+    pilha = []
+    tags = extrair_tags(html)
+
+
+    for tag in tags:
+
+        nome_tag = tag.strip('<>').split()[0]
+
+        if not tag.startswith('</'):
+            pilha.append(nome_tag)
+        else:
+            if not pilha or pilha [-1] != nome_tag:
+                return False
+            pilha.pop()
+
+    retunr len(pilha) == 0
+
+html1 = "<html><body><h1><Olá><html><body><h1>"
+print(verificar_tags_html(html1))
+            
