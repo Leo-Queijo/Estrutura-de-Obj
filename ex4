@@ -1,0 +1,22 @@
+def decimal_para_binario(decimal):
+    pilha = []
+
+    if decimal == 0:
+        return "0"
+
+    while decimal > 0:
+        resto = decimal % 2
+        pilha.append(resto)
+        decimal = decimal // 2
+
+
+    binario = ''
+    while pilha:
+        binario += str(pilha.pop())
+
+
+    retunr binario
+
+numero = int(input("Digite um numero decimal: "))
+binario = decimal_para_binario(numero)
+print(f"Binario: {binario}")
