@@ -1,0 +1,22 @@
+#####Exercicio 1
+
+def eh_palindromo(palavra):
+    pilha = []
+
+    for letra in palavra:
+        pilha.append(letra)
+
+    ao_contrario = ''
+    while pilha:
+          letra = pilha.pop()
+          ao_contrario += letra
+
+
+    if palavra == ao_contrario:
+        return True
+    else:
+        return False
+
+
+print(eh_palindromo("arara"))
+print(eh_palindromo("banana"))
