@@ -1,0 +1,13 @@
+def inverter_string(texto):
+    pilha = []
+
+    for caractere in texto:
+        pilha.append(caractere)
+
+    invertida = ''
+    while pilha:
+          invertida += pilha.pop()
+
+    return invertida
+
+print (inverter_string("arara"))
