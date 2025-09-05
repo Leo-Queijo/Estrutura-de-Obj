@@ -1,0 +1,20 @@
+from collections import deque 
+
+def intercalar_listas(lista1, lista2):
+    d1 = deque(lista1)
+    d2 = deque(lista2)
+    resultado = []
+
+    while d1 or d2:
+        if d1:
+            resultado.append(d1.popleft())
+        if d2:
+            resultado.append(d2.popleft())
+
+    return resultado
+
+
+lista1 = [1, 2, 5]
+lista2 = [3, 6, 8]
+
+print(intercalar_listas(lista1, lista2))
