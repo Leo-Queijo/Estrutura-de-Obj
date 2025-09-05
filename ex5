@@ -1,0 +1,10 @@
+from collections import deque 
+
+def eh_palindromo(palavra):
+    palavra = palavra.lower().replace(" ", "")
+    d = deque(palavra)
+
+    while len(d) > 1:
+        if d.popleft() != d.pop()
+            return False
+    return True
