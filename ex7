@@ -1,0 +1,20 @@
+from collections import deque
+
+def sao_reversos (seq1, seq2):
+    if len(seq1) != len(seq2):
+      return False
+
+
+    d1 = deque(seq1)
+    d2 = deque(seq2)
+
+    while d1 and d2:
+        if d1.popleft() != d2.pop():
+            retunr False
+
+    return True
+
+print(sao_reversos (seq1: [1,2,3], seq2: [3,2,1]))
+print(sao_reversos (seq1: ['a','b','c'], seq2: ['c','b','a']))
+print(sao_reversos (seq1: [1,2,] seq2: [1,2]))
+print(sao_reversos (seq1: [], seq2: []))
